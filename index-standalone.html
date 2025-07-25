@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FiveM RP Server</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="src/assets/fivem-logo.png" alt="FiveM Logo" class="nav-logo">
+                <span class="nav-title">FiveM RP Server</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#" class="nav-link active" data-page="home">Home</a>
+                <a href="#" class="nav-link" data-page="rules">Regulamin</a>
+                <a href="#" class="nav-link" data-page="changelog">Changelog</a>
+                <a href="#" class="nav-link" data-page="applications">Podania</a>
+                <a href="#" class="nav-link" data-page="status">Sprawdź Status</a>
+            </div>
+            <button class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Page -->
+        <div id="home" class="page active">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h1 class="hero-title">FiveM RP Server</h1>
+                    <p class="hero-description">
+                        Najlepszy serwer roleplay w Polsce. Dołącz do naszej społeczności 
+                        i rozpocznij swoją przygodę w Los Santos!
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="window.open('fivem://connect/fivemrp.pl', '_blank')">
+                            Dołącz do serwera
+                        </button>
+                        <button class="btn btn-outline" onclick="window.open('https://discord.gg/fivemrp', '_blank')">
+                            Discord
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Stats Section -->
+            <section class="stats">
+                <div class="container">
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-value">500+</div>
+                            <div class="stat-label">Aktywni gracze</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">25+</div>
+                            <div class="stat-label">Organizacje</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">200+</div>
+                            <div class="stat-label">Pojazdy</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">15+</div>
+                            <div class="stat-label">Prace</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section class="features">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Dlaczego nasz serwer?</h2>
+                        <p>Oferujemy wyjątkowe doświadczenie roleplay z profesjonalną obsługą i aktywną społecznością</p>
+                    </div>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">👥</div>
+                            <h3>Aktywna społeczność</h3>
+                            <p>Ponad 500 aktywnych graczy codziennie</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🛡️</div>
+                            <h3>Profesjonalne służby</h3>
+                            <p>LSPD, EMS i inne służby publiczne</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🚗</div>
+                            <h3>Realistyczny gameplay</h3>
+                            <p>Ekonomia, praca, organizacje przestępcze</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🏢</div>
+                            <h3>Własne firmy</h3>
+                            <p>Załóż swoją firmę i rozwijaj biznes</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="cta">
+                <div class="container">
+                    <h2>Gotowy na przygodę?</h2>
+                    <p>Dołącz do nas już dziś i zacznij swoją historię w Los Santos</p>
+                    <div class="cta-buttons">
+                        <button class="btn btn-primary" onclick="showPage('applications')">
+                            Złóż podanie
+                        </button>
+                        <button class="btn btn-outline" onclick="showPage('rules')">
+                            Przeczytaj regulamin
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Rules Page -->
+        <div id="rules" class="page">
+            <div class="container">
+                <div class="page-header">
+                    <h1>Regulamin Serwera</h1>
+                    <p>Zapoznaj się z zasadami obowiązującymi na naszym serwerze</p>
+                </div>
+
+                <div class="info-card">
+                    <h3>⚠️ Ważne informacje</h3>
+                    <p>Poniższy regulamin obowiązuje wszystkich graczy na serwerze FiveM RP Server.</p>
+                    <p class="text-muted">Wersja regulaminu: 3.2 | Data ostatniej aktualizacji: 15.01.2024</p>
+                </div>
+
+                <div class="rules-sections">
+                    <div class="rule-section">
+                        <h3>§1 Postanowienia ogólne</h3>
+                        <ol>
+                            <li>Nieznajomość regulaminu nie zwalnia z jego przestrzegania</li>
+                            <li>Administracja ma prawo do interpretacji regulaminu</li>
+                            <li>Regulamin może zostać zmieniony w każdej chwili</li>
+                            <li>Gracze są zobowiązani do śledzenia zmian w regulaminie</li>
+                        </ol>
+                    </div>
+
+                    <div class="rule-section">
+                        <h3>§2 Roleplay</h3>
+                        <ol>
+                            <li>Roleplay (RP) jest obowiązkowy na całym serwerze</li>
+                            <li>Zabronione jest łamanie charakteru postaci (OOC)</li>
+                            <li>Należy grać zgodnie z charakterem swojej postaci</li>
+                            <li>Każda postać musi mieć przemyślaną historię</li>
+                            <li>Zabronione jest używanie informacji zdobytych poza grą (metagaming)</li>
+                        </ol>
+                    </div>
+
+                    <div class="rule-section">
+                        <h3>§3 Komunikacja</h3>
+                        <ol>
+                            <li>Zabronione jest używanie wulgaryzmów w czacie IC</li>
+                            <li>Czat OOC służy tylko do komunikacji poza grą</li>
+                            <li>Nie wolno spamować na czacie</li>
+                            <li>Reklamy innych serwerów są zabronione</li>
+                            <li>Należy używać mikrofonu o dobrej jakości</li>
+                        </ol>
+                    </div>
+
+                    <div class="rule-section">
+                        <h3>§4 Zachowanie w grze</h3>
+                        <ol>
+                            <li>Zabronione jest RDM (Random Deathmatch)</li>
+                            <li>Zabronione jest VDM (Vehicle Deathmatch)</li>
+                            <li>Powrót na miejsce śmierci bez uzasadnienia RP jest zabroniony</li>
+                            <li>Należy szanować nową życie po respawn</li>
+                            <li>Zabronione jest trollowanie i griefing</li>
+                        </ol>
+                    </div>
+
+                    <div class="rule-section">
+                        <h3>§5 Służby mundurowe</h3>
+                        <ol>
+                            <li>Członkowie służb muszą przestrzegać procedur</li>
+                            <li>Korupcja jest dozwolona tylko z pozwoleniem administracji</li>
+                            <li>Służby nie mogą działać przeciwko sobie bez uzasadnienia</li>
+                            <li>Obowiązkowe jest używanie radiofonii</li>
+                            <li>Każda akcja musi być zgłoszona w raporcie</li>
+                        </ol>
+                    </div>
+
+                    <div class="rule-section">
+                        <h3>§6 Organizacje przestępcze</h3>
+                        <ol>
+                            <li>Każda organizacja musi być zatwierdzona przez administrację</li>
+                            <li>Wojny między organizacjami wymagają pozwolenia</li>
+                            <li>Zabronione są bezsensowne strzelaniny</li>
+                            <li>Każda akcja przestępcza musi mieć motyw RP</li>
+                            <li>Należy przestrzegać hierarchii w organizacji</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="penalties-card">
+                    <h3>Konsekwencje łamania regulaminu</h3>
+                    <div class="penalties-grid">
+                        <div class="penalty-item">
+                            <h4>Ostrzeżenie</h4>
+                            <p>Za drobne naruszenia regulaminu</p>
+                        </div>
+                        <div class="penalty-item">
+                            <h4>Kick/Ban czasowy</h4>
+                            <p>Za poważniejsze naruszenia</p>
+                        </div>
+                        <div class="penalty-item">
+                            <h4>Ban permanentny</h4>
+                            <p>Za ciężkie naruszenia i recydywę</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Changelog Page -->
+        <div id="changelog" class="page">
+            <div class="container">
+                <div class="page-header">
+                    <h1>Historia Zmian</h1>
+                    <p>Zobacz co nowego na serwerze</p>
+                </div>
+
+                <div class="changelog-list">
+                    <div class="changelog-item">
+                        <div class="changelog-header">
+                            <div>
+                                <h3>v3.2.1</h3>
+                                <p class="changelog-date">📅 15.01.2024</p>
+                            </div>
+                            <span class="badge badge-update">Aktualizacja</span>
+                        </div>
+                        <div class="changelog-changes">
+                            <div class="change-item add">
+                                <span class="change-icon">+</span>
+                                <span>Dodano nowy system pracy dla mechaników</span>
+                            </div>
+                            <div class="change-item add">
+                                <span class="change-icon">+</span>
+                                <span>Wprowadzono nowe pojazdy do LSPD</span>
+                            </div>
+                            <div class="change-item fix">
+                                <span class="change-icon">🐛</span>
+                                <span>Naprawiono błąd z respawnem pojazdów</span>
+                            </div>
+                            <div class="change-item fix">
+                                <span class="change-icon">🐛</span>
+                                <span>Poprawiono system ekonomiczny</span>
+                            </div>
+                            <div class="change-item change">
+                                <span class="change-icon">⚙️</span>
+                                <span>Zmieniono wynagrodzenia za niektóre prace</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="changelog-item">
+                        <div class="changelog-header">
+                            <div>
+                                <h3>v3.2.0</h3>
+                                <p class="changelog-date">📅 08.01.2024</p>
+                            </div>
+                            <span class="badge badge-major">Duża aktualizacja</span>
+                        </div>
+                        <div class="changelog-changes">
+                            <div class="change-item add">
+                                <span class="change-icon">+</span>
+                                <span>Całkowicie nowy system gangów</span>
+                            </div>
+                            <div class="change-item add">
+                                <span class="change-icon">+</span>
+                                <span>Dodano system terytoriów</span>
+                            </div>
+                            <div class="change-item add">
+                                <span class="change-icon">+</span>
+                                <span>Wprowadzono nowe bronie</span>
+                            </div>
+                            <div class="change-item change">
+                                <span class="change-icon">⚙️</span>
+                                <span>Przeprojektowano system policji</span>
+                            </div>
+                            <div class="change-item remove">
+                                <span class="change-icon">🗑️</span>
+                                <span>Usunięto stary system walki</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="changelog-item">
+                        <div class="changelog-header">
+                            <div>
+                                <h3>v3.1.5</h3>
+                                <p class="changelog-date">📅 28.12.2023</p>
+                            </div>
+                            <span class="badge badge-hotfix">Hotfix</span>
+                        </div>
+                        <div class="changelog-changes">
+                            <div class="change-item fix">
+                                <span class="change-icon">🐛</span>
+                                <span>Naprawiono krytyczny błąd z zapisywaniem postaci</span>
+                            </div>
+                            <div class="change-item fix">
+                                <span class="change-icon">🐛</span>
+                                <span>Poprawiono problemy z synchronizacją</span>
+                            </div>
+                            <div class="change-item fix">
+                                <span class="change-icon">🐛</span>
+                                <span>Naprawiono błąd z inwentarzem</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3>📢 Informacja</h3>
+                    <p>Aktualizacje są wprowadzane regularnie. Śledź nasz Discord, aby być na bieżąco z najnowszymi zmianami!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Applications Page -->
+        <div id="applications" class="page">
+            <div class="container">
+                <div class="page-header">
+                    <h1>Podania</h1>
+                    <p>Wybierz rodzaj podania, które chcesz złożyć</p>
+                </div>
+
+                <div class="applications-grid">
+                    <div class="application-card">
+                        <div class="app-icon">🚑</div>
+                        <h3>EMS</h3>
+                        <p>Zostań ratownikiem medycznym i pomagaj obywatelom Los Santos</p>
+                        <button class="btn btn-primary" onclick="window.open('https://forms.google.com/ems', '_blank')">
+                            Złóż podanie
+                        </button>
+                    </div>
+
+                    <div class="application-card">
+                        <div class="app-icon">👮</div>
+                        <h3>LSPD</h3>
+                        <p>Dołącz do policji i dbaj o bezpieczeństwo w mieście</p>
+                        <button class="btn btn-primary" onclick="window.open('https://forms.google.com/lspd', '_blank')">
+                            Złóż podanie
+                        </button>
+                    </div>
+
+                    <div class="application-card">
+                        <div class="app-icon">🔧</div>
+                        <h3>Mechanik</h3>
+                        <p>Naprawiaj pojazdy i prowadź własny warsztat</p>
+                        <button class="btn btn-primary" onclick="window.open('https://forms.google.com/mechanic', '_blank')">
+                            Złóż podanie
+                        </button>
+                    </div>
+
+                    <div class="application-card">
+                        <div class="app-icon">🏛️</div>
+                        <h3>Organizacja przestępcza</h3>
+                        <p>Stwórz lub dołącz do organizacji przestępczej</p>
+                        <button class="btn btn-primary" onclick="window.open('https://forms.google.com/crime-org', '_blank')">
+                            Złóż podanie
+                        </button>
+                    </div>
+
+                    <div class="application-card">
+                        <div class="app-icon">💀</div>
+                        <h3>Gang</h3>
+                        <p>Załóż swój gang uliczny i walcz o terytorium</p>
+                        <button class="btn btn-primary" onclick="window.open('https://forms.google.com/gang', '_blank')">
+                            Złóż podanie
+                        </button>
+                    </div>
+
+                    <div class="application-card">
+                        <div class="app-icon">🏢</div>
+                        <h3>Firma</h3>
+                        <p>Rozpocznij własną działalność gospodarczą</p>
+                        <button class="btn btn-primary" onclick="window.open('https://forms.google.com/company', '_blank')">
+                            Złóż podanie
+                        </button>
+                    </div>
+
+                    <div class="application-card">
+                        <div class="app-icon">⚙️</div>
+                        <h3>Administrator</h3>
+                        <p>Pomóż w zarządzaniu serwerem jako administrator</p>
+                        <button class="btn btn-primary" onclick="window.open('https://forms.google.com/admin', '_blank')">
+                            Złóż podanie
+                        </button>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3>📋 Ważne informacje</h3>
+                    <p>Przed złożeniem podania upewnij się, że spełniasz wszystkie wymagania wymienione w regulaminie. Wszystkie podania są rozpatrywane przez administrację w kolejności wpływu.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Application Status Page -->
+        <div id="status" class="page">
+            <div class="container">
+                <div class="page-header">
+                    <h1>Sprawdź Status Podania</h1>
+                    <p>Dowiedz się jak sprawdzić status swojego podania</p>
+                </div>
+
+                <div class="status-methods">
+                    <div class="status-card">
+                        <div class="status-icon">💬</div>
+                        <h3>Discord</h3>
+                        <p>Najszybszy sposób sprawdzenia statusu podania</p>
+                        <ul>
+                            <li>Wejdź na nasz serwer Discord</li>
+                            <li>Przejdź do kanału #status-podań</li>
+                            <li>Napisz do administracji na priv</li>
+                        </ul>
+                        <button class="btn btn-primary" onclick="window.open('https://discord.gg/fivemrp', '_blank')">
+                            Otwórz Discord
+                        </button>
+                    </div>
+
+                    <div class="status-card">
+                        <div class="status-icon">📊</div>
+                        <h3>Google Sheets</h3>
+                        <p>Publiczna lista wszystkich podań (bez danych osobowych)</p>
+                        <ul>
+                            <li>Lista podań z numerami referencyjnymi</li>
+                            <li>Aktualny status każdego podania</li>
+                            <li>Orientacyjny czas rozpatrzenia</li>
+                        </ul>
+                        <button class="btn btn-primary" onclick="window.open('https://docs.google.com/spreadsheets/status', '_blank')">
+                            Sprawdź listę
+                        </button>
+                    </div>
+
+                    <div class="status-card">
+                        <div class="status-icon">✉️</div>
+                        <h3>Kontakt bezpośredni</h3>
+                        <p>Skontaktuj się bezpośrednio z administracją</p>
+                        <ul>
+                            <li>E-mail: admin@fivemrp.pl</li>
+                            <li>Discord: @AdminFiveM#1234</li>
+                            <li>Forum: sekcja "Podania"</li>
+                        </ul>
+                        <button class="btn btn-outline" onclick="window.open('mailto:admin@fivemrp.pl', '_blank')">
+                            Wyślij e-mail
+                        </button>
+                    </div>
+                </div>
+
+                <div class="status-timeline">
+                    <h3>Typowy czas rozpatrzenia podań</h3>
+                    <div class="timeline-grid">
+                        <div class="timeline-item">
+                            <span class="timeline-badge">1-3 dni</span>
+                            <div>
+                                <h4>EMS, LSPD, Mechanik</h4>
+                                <p>Podania do służb publicznych</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-badge">3-7 dni</span>
+                            <div>
+                                <h4>Firmy, Organizacje</h4>
+                                <p>Podania biznesowe i przestępcze</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-badge">7-14 dni</span>
+                            <div>
+                                <h4>Administrator</h4>
+                                <p>Podania administracyjne</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>FiveM RP Server</h4>
+                    <p>Najlepszy serwer roleplay w Polsce</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Szybkie linki</h4>
+                    <a href="#" onclick="showPage('rules')">Regulamin</a>
+                    <a href="#" onclick="showPage('applications')">Podania</a>
+                    <a href="#" onclick="showPage('changelog')">Changelog</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Społeczność</h4>
+                    <a href="https://discord.gg/fivemrp" target="_blank">Discord</a>
+                    <a href="https://fivemrp.pl" target="_blank">Strona serwera</a>
+                    <a href="https://forum.fivemrp.pl" target="_blank">Forum</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontakt</h4>
+                    <a href="mailto:admin@fivemrp.pl">admin@fivemrp.pl</a>
+                    <a href="tel:+48123456789">+48 123 456 789</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FiveM RP Server. Wszystkie prawa zastrzeżone.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
